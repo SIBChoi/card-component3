@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: #3829e0;
+  --neutral-very-pale-blue: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-size: cover;
+}
+
+.card {
+  max-width: 40rem;
+  align-self: center;
+  background-color: var(--neutral-very-pale-blue);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.header-img {
+  display: block;
+  width: 100%;
+}
+
+.card-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  color: var(--neutral-dark-blue);
+  font-weight: 900;
+}
+
+.text {
+  font-size: 1.6rem;
+  color: var(--neutral-desaturated-blue);
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.card-detail {
+  display: flex;
+  align-items: center;
+  background-color: hsl(225, 100%, 94%, 0.3);
+  padding: 1.6rem;
+  border-radius: 11px;
+  margin-bottom: 1.6rem;
+}
+
+.music-icon {
+  padding-right: 1.2rem;
+}
+
+.plan {
+  color: var(--neutral-dark-blue);
+  font-size: 1.6rem;
+  font-weight: 900;
+  padding-bottom: 0.4rem;
+}
+
+.price {
+  color: var(--neutral-desaturated-blue);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.attribution {
+  align-self: end;
+  padding-bottom: 2.4rem;
+}
+
+.card-detail p:last-child:not(.price) {
+  margin-left: auto;
+  font-size: 1.4rem;
+  color: var(--primary-bright-blue);
+  border-bottom: 3px solid currentColor;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta {
+  display: block;
+  padding: 1.2rem 0;
+  border-radius: 11px;
+  font-weight: 700;
+  border: none;
+}
+
+.cta--payment {
+  background-color: var(--primary-bright-blue);
+  color: #fff;
+  box-shadow: 0 1.6rem 1rem hsl(245, 75%, 52%, 0.15);
+  margin-bottom: 2.4rem;
+}
+
+.cta--payment:hover {
+  cursor: pointer;
+  background-color: #2d21b3;
+}
+
+.cta--cancel {
+  background-color: var(--neutral-very-pale-blue);
+  color: var(--neutral-desaturated-blue);
+  margin-bottom: 1.6rem;
+}
+
+.cta--cancel:hover {
+  box-shadow: inset 0 0 0 3px hsl(225, 100%, 94%);
+  cursor: pointer;
+}
